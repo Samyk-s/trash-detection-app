@@ -1,0 +1,49 @@
+/* src/styles/TabBar.css */
+
+.top-bar {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.tab-bar {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.tab-bar img.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.tab-bar a {
+  position: relative;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.tab-bar a:hover {
+  background-color: #ECFFDC;
+  color: black;
+}
+
+.tab-bar a:hover::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background-color: #ECFFDC;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
