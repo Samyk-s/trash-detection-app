@@ -9,9 +9,7 @@ import logo from '../assets/logo.jpeg';
 const TabBar = () => {
   return (
     <div>
-      <div className="top-bar">
-        <span>Welcome</span>
-      </div>
+      
       <div className="tab-bar">
         <img src={logo} alt="Logo" className="logo" />
         <Link to="/">🏠︎ Home</Link>
