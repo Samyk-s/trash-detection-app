@@ -1,25 +1,3 @@
-.live-detection {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.webcam-container {
-  position: relative;
-  width: 80%;
-  max-width: 640px;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-
 /* src/styles/App.css */
 
 body {
@@ -138,4 +116,31 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 40px;
+}
+
+.live-detection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.webcam-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.webcam-container {
+  position: relative;
+  width: 80%;
+  max-width: 640px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

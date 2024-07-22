@@ -89,26 +89,28 @@ const LiveDetection = () => {
   return (
     <div className="live-detection">
       <TabBar />
-      <div className="webcam-container">
-        <Webcam
-          audio={false}
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-          style={{ width: '100%' }}
-        />
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: 'absolute',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            left: 0,
-            right: 0,
-            textAlign: 'center',
-            zIndex: 9,
-            width: '100%',
-          }}
-        />
+      <div className="webcam-wrapper">
+        <div className="webcam-container">
+          <Webcam
+            audio={false}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            style={{ width: '100%' }}
+          />
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: 'absolute',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              left: 0,
+              right: 0,
+              textAlign: 'center',
+              zIndex: 9,
+              width: '100%',
+            }}
+          />
+        </div>
       </div>
     </div>
   );
