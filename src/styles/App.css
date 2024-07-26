@@ -83,7 +83,7 @@ body {
 }
 
 .about-section, .services-section {
-  padding: 60px 20px;
+  padding: 15px 20px;
   background-color: white;
 }
 
@@ -91,7 +91,6 @@ body {
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
-  padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -99,12 +98,10 @@ body {
 .services-section {
   display: flex;
   justify-content: space-around;
-  margin-top: 40px;
 }
 
 .service-box {
   background-color: #f9f9f9;
-  padding: 20px;
   width: 30%;
   text-align: center;
   border: 1px solid #ddd;
@@ -112,10 +109,8 @@ body {
 }
 
 footer {
-  background-color: #E5E4E2;
-  padding: 20px;
   text-align: center;
-  margin-top: 40px;
+  font-size: 14px;
 }
 
 .live-detection {

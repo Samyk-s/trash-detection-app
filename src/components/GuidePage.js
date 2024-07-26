@@ -1,51 +1,144 @@
 import React from 'react';
-import TabBar from './TabBar';
 import '../styles/GuidePage.css';
-import recyclingImage from '../assets/recycling.jpg';
-import nonRecyclingImage from '../assets/non-recycling.jpg';
+import TabBar from '../components/TabBar'; // Import TabBar
 
 const GuidePage = () => {
   return (
     <div>
-      <TabBar />
-      <div className="guide-container">
-        <h2>Recycling and Planting Guide</h2>
-        <section className="recycling-section">
-          <h3>Recycling Guide</h3>
-          <p>Recycling helps to reduce the pollution caused by waste and reduces the need for raw materials so that the rainforests can be preserved. Here are some common recyclable items:</p>
-          <ul>
-            <li><strong>Plastic Bottles:</strong> Recycle at designated plastic recycling bins.</li>
-            <li><strong>Paper:</strong> Recycle at paper recycling centers or use in compost.</li>
-            <li><strong>Glass:</strong> Take to glass recycling points.</li>
-          </ul>
-          <p>Here are some suggestions on what to do with non-recyclable items:</p>
-          <ul>
-            <li><strong>Plastic Bags:</strong> Reuse them for shopping or storage.</li>
-            <li><strong>Batteries:</strong> Dispose of them at designated battery recycling points.</li>
-            <li><strong>Ceramics:</strong> Use broken ceramics for mosaic art projects.</li>
-          </ul>
-          <img src={recyclingImage} alt="Recycling" className="guide-image" />
-        </section>
-        <section className="non-recycling-section">
-          <h3>Non-Recyclable Items Guide</h3>
-          <p>It's important to know what items cannot be recycled so we can dispose of them properly and reduce contamination in the recycling stream. Here are some non-recyclable items:</p>
-          <ul>
-            <li><strong>Food Waste:</strong> Can be composted instead of being thrown in the trash.</li>
-            <li><strong>Polystyrene Foam:</strong> Avoid using it; opt for reusable or recyclable alternatives.</li>
-            <li><strong>Clothing:</strong> Donate if in good condition, otherwise consider textile recycling options.</li>
-          </ul>
-          <img src={nonRecyclingImage} alt="Non-Recyclable" className="guide-image" />
-        </section>
-        <section className="planting-section">
-          <h3>Planting Guide</h3>
-          <p>Planting trees and maintaining a garden can significantly improve your environment. Here are some tips:</p>
-          <ul>
-            <li><strong>Choose the Right Plants:</strong> Select plants that are suitable for your climate and soil type.</li>
-               <li><strong>Prepare Your Soil:</strong> Use compost and mulch to enrich the soil and retain moisture.</li>
-            <li><strong>Watering:</strong> Water your plants regularly, especially during dry spells, but avoid overwatering.</li>
-            <li><strong>Maintenance:</strong> Regularly weed and prune your plants to keep them healthy and encourage growth.</li>
-          </ul>
-        </section>
+      <TabBar /> {/* Include TabBar at the top */}
+      <div className="guide-page">
+        <h1>Recycling Guidelines and Processes</h1>
+        <div className="intro">
+          <p>Recycling is an essential process for managing waste and conserving resources. By following proper recycling guidelines, we can reduce the amount of waste sent to landfills, conserve natural resources, and protect the environment. This guide provides detailed information on how to properly recycle common household items and highlights the items that cannot be recycled through regular means.</p>
+          <p>Understanding what can and cannot be recycled is crucial for effective waste management. This guide aims to educate and inform about the best practices for recycling various materials, ensuring that you contribute positively to the environment.</p>
+        </div>
+        <div className="guide-section">
+          <h2>Common Recyclable Items</h2>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/paper1.jpg')} alt="Paper Products 1" className="item-image" />
+              <img src={require('../assets/paper2.jpg')} alt="Paper Products 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Paper Products</h3>
+              <p><strong>Guidelines:</strong> Remove any plastic wrappers, flatten paper products</p>
+              <p><strong>Process:</strong> Place in a designated paper recycling bin</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/plastic1.jpg')} alt="Plastic Bottles and Containers 1" className="item-image" />
+              <img src={require('../assets/plastic2.jpg')} alt="Plastic Bottles and Containers 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Plastic Bottles and Containers</h3>
+              <p><strong>Guidelines:</strong> Rinse out any residue, remove caps</p>
+              <p><strong>Process:</strong> Place in the plastic recycling bin</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/glass1.jpg')} alt="Glass Bottles and Jars 1" className="item-image" />
+              <img src={require('../assets/glass2.jpg')} alt="Glass Bottles and Jars 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Glass Bottles and Jars</h3>
+              <p><strong>Guidelines:</strong> Rinse out residue, remove lids</p>
+              <p><strong>Process:</strong> Place in the glass recycling bin</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/metal1.jpg')} alt="Metal Cans and Foil 1" className="item-image" />
+              <img src={require('../assets/metal2.jpg')} alt="Metal Cans and Foil 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Metal Cans and Foil</h3>
+              <p><strong>Guidelines:</strong> Rinse and flatten cans, clean foil</p>
+              <p><strong>Process:</strong> Place in the metal recycling bin</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/cardboard1.jpg')} alt="Cardboard 1" className="item-image" />
+              <img src={require('../assets/cardboard2.jpg')} alt="Cardboard 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Cardboard</h3>
+              <p><strong>Guidelines:</strong> Flatten boxes, remove any non-paper packing materials</p>
+              <p><strong>Process:</strong> Place in the cardboard recycling bin</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="guide-section">
+          <h2>Common Non-Recyclable Items</h2>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/food1.jpg')} alt="Food Waste 1" className="item-image" />
+              <img src={require('../assets/food2.jpg')} alt="Food Waste 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Food Waste</h3>
+              <p><strong>Guidelines:</strong> Use composting if available</p>
+              <p><strong>Process:</strong> Place in organic waste bin or compost bin</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/plastic_bags1.jpg')} alt="Plastic Bags and Wrappers 1" className="item-image" />
+              <img src={require('../assets/plastic_bags2.jpg')} alt="Plastic Bags and Wrappers 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Plastic Bags and Wrappers</h3>
+              <p><strong>Guidelines:</strong> Avoid if possible, use reusable bags</p>
+              <p><strong>Process:</strong> Dispose of in regular trash or check for local recycling programs</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/styrofoam1.jpg')} alt="Styrofoam 1" className="item-image" />
+              <img src={require('../assets/styrofoam2.jpg')} alt="Styrofoam 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Styrofoam</h3>
+              <p><strong>Guidelines:</strong> Avoid using, look for alternatives</p>
+              <p><strong>Process:</strong> Place in regular trash unless a local recycling program is available</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/electronics1.jpg')} alt="Electronics 1" className="item-image" />
+              <img src={require('../assets/electronics2.jpg')} alt="Electronics 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Electronics</h3>
+              <p><strong>Guidelines:</strong> Do not dispose of in regular trash</p>
+              <p><strong>Process:</strong> Take to e-waste recycling centers</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="item-images">
+              <img src={require('../assets/hazardous1.jpg')} alt="Hazardous Materials 1" className="item-image" />
+              <img src={require('../assets/hazardous2.jpg')} alt="Hazardous Materials 2" className="item-image" />
+            </div>
+            <div className="item-text">
+              <h3>Hazardous Materials</h3>
+              <p><strong>Guidelines:</strong> Follow local disposal guidelines</p>
+              <p><strong>Process:</strong> Take to hazardous waste disposal facilities</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
