@@ -1,5 +1,5 @@
 .guide-page {
-  padding: 20px;
+  padding: 80px 20px 20px; /* Add top padding to avoid overlap with TabBar */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -13,32 +13,52 @@
   margin-bottom: 40px;
 }
 
-.item {
+.item-container {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-between; /* Evenly space items */
 }
 
-.item-images {
+.item {
   display: flex;
-  gap: 10px;
-  margin-right: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .item-image {
-  width: 6cm;
-  height: 6cm;
+  width: 200px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
   object-fit: cover;
 }
 
-.item-text {
-  max-width: 600px;
+.item-name {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.item-text h3 {
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal h3 {
   margin-top: 0;
 }
 
-h1, h2 {
-  text-align: center;
+.modal button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }

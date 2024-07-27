@@ -5,9 +5,9 @@ import Webcam from 'react-webcam';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import '@tensorflow/tfjs';
 import TabBar from './TabBar';
-import '../styles/App.css';
+import '../styles/LiveDetection.css';
 
-const recyclableItems = ['book', 'paper', 'glass', 'bottle', 'pen', 'mouse','handbag','suitcase'];
+const recyclableItems = ['book', 'paper', 'glass', 'bottle', 'pen', 'mouse', 'handbag', 'suitcase'];
 const nonRecyclableItems = ['ceramic', 'plastic', 'battery', 'carton', 'cell phone', 'mobile', 'coffee cups', 'bubble wraps'];
 
 const classifyObject = (object) => {
@@ -95,22 +95,17 @@ const LiveDetection = () => {
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
-            style={{ width: '100%' }}
+            className="webcam"
           />
           <canvas
             ref={canvasRef}
-            style={{
-              position: 'absolute',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              left: 0,
-              right: 0,
-              textAlign: 'center',
-              zIndex: 9,
-              width: '100%',
-            }}
+            className="webcam-canvas"
           />
         </div>
+      </div>
+      <div className="recycling-sites">
+        <h2>Recycling Sites:</h2>
+        <a href="http://www.atlas.d-waste.com/" target="_blank" rel="noopener noreferrer">http://www.atlas.d-waste.com/</a>
       </div>
     </div>
   );
